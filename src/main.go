@@ -20,7 +20,7 @@ const (
 	SERVER   = "127.0.0.1"
 	PORT     = 3306
 	DATABASE = "test"
-	R2MProxy = "127.0.0.1:6379"
+	RedisProxy = "127.0.0.1:6379"
 )
 
 
@@ -33,7 +33,7 @@ type OfflineBuilding struct {
 }
 
 DataClient = redis.NewClient(&redis.Options{
-	Addr:        R2MProxy,
+	Addr:        RedisProxy,
 	Password:    "test",
 	PoolSize:    512,
 	PoolTimeout: time.Second * time.Duration(5)})
